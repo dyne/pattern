@@ -29,7 +29,7 @@ const Preview = ({ title = "", tip, w, h }) => {
                                         height="100%"
                                         preserveAspectRatio="xMidYMid meet"
                                         xlinkHref={`https://ucarecdn.com/${image.uuid}/-/scale_crop/${w + 1}x${h + 1}/smart/center`}
-                                        filter="url(#filter)" />
+                                        filter={`url(#filter)${image.extraFilter}`} />
                                 </g>
                             </svg>
                         </figure>
@@ -38,7 +38,7 @@ const Preview = ({ title = "", tip, w, h }) => {
                             <div className="justify-end card-actions">
                                 <div className="badge badge-outline">{w}x{h}</div>
                                 <button className="btn btn-primary btn-xs" onClick={() => { 
-                                    saveSvgAsPng(document.getElementById(title), `${title.replaceAll(" ", "-")}.png`)
+                                    saveSvgAsPng(document.getElementById(title), `${title.replaceAll(" ", "-")}-${image.uuid}-.png`)
                                 }}>Download</button>
                             </div>
                         </div>

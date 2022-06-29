@@ -1,6 +1,5 @@
 import Head from 'next/head'
-import { useState, createContext } from 'react'
-import Crop from "../components/Crop"
+import { useState } from 'react'
 import ArgumentPicker from "../components/ArgumentPicker"
 import ImagePicker from "../components/ImagePicker"
 import Preview from "../components/Preview"
@@ -8,11 +7,11 @@ import PreviewSection from '../components/PreviewSection'
 import ImageContext from "../components/ImageContext"
 
 export default function Home() {
-    const [image, setImage] = useState(null)
     const [uuid, setUuid] = useState("b555ca32-eee0-48cf-a943-175bc1498367")
     const [softness, setSoftness] = useState(2);
     const [fg, setFg] = useState("8A84F2");
     const [bg, setBg] = useState("FCEFE0");
+    const [extraFilter, setExtraFilter] = useState("");
     const setColor = (f, b) => {
         setFg(f);
         setBg(b);
@@ -31,17 +30,17 @@ export default function Home() {
                     Welcome to <span className="text-purple-700"> 👾 pattern Dyne.org </span>
                 </h1>
 
-                <div className="grid grid-cols-2">
-                <ImagePicker setImage={setImage} setUuid={setUuid} />
-                <ArgumentPicker setColor={setColor} setSoftness={setSoftness} />
+                <div className="grid grid-cols-3">
+                    <ImagePicker setUuid={setUuid} />
+                    <ArgumentPicker setColor={setColor} setSoftness={setSoftness} setExtraFilter={setExtraFilter} />
                 </div>
 
-                {/* <Crop image={image} /> */}
                 <ImageContext.Provider value={{
                     uuid: uuid,
                     softness: softness,
                     fg: fg,
                     bg: bg,
+                    extraFilter: extraFilter
                 }}>
                     <PreviewSection name="facebook" description="Because the size of this social network, Facebook images are mostly utilitarian. Don't expect people to passionately explore them and pin them to their moodboards. However, Facebook supports a wide variety of sizes, so you can utilize them to build a solid brand image.">
                         <Preview title="facebook image post" w={1200} h={630} tip="Pro Tip: Because posts with singular images take full width, you may use text as well as highly-detailed images. They will be easily recognizable and noticeable." />

@@ -28,7 +28,7 @@ const Filter = ({ bg, fg, softness, children }) => {
 
 
     return (<>
-        <filter id="sporco">
+        <filter id="sporcume">
             <feTurbulence type="fractalNoise" baseFrequency=".01" numOctaves="10" />
             <feDisplacementMap in="SourceGraphic" scale="240" />
         </filter>

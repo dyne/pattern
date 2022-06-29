@@ -9,7 +9,6 @@ specifiers:
   next: 12.1.6
   postcss: ^8.4.14
   react: 18.2.0
-  react-cropper: ^2.1.8
   react-dom: 18.2.0
   save-svg-as-png: ^1.4.17
   tailwindcss: ^3.1.3
@@ -20,7 +19,6 @@ dependencies:
   daisyui: 2.15.4_ugi4xkrfysqkt4c4y6hkyfj344
   next: 12.1.6_biqbaboplfbrettd7655fr4n2y
   react: 18.2.0
-  react-cropper: 2.1.8_react@18.2.0
   react-dom: 18.2.0_react@18.2.0
   save-svg-as-png: 1.4.17
   uploadcare-widget: 3.17.2
@@ -553,10 +551,6 @@ packages:
     resolution: {integrity: sha512-3qNgf6TqI3U1uhuSYRzJZGfFd4T+YlbyVPl+jgRiKjdZopvG4keZQwWZDAWpu1UH9nCgTpUzIV3GFawC7cJsqg==, registry: https://registry.yarnpkg.com/, tarball: https://registry.yarnpkg.com/core-js-pure/-/core-js-pure-3.23.1.tgz}
     requiresBuild: true
     dev: true
-
-  /cropperjs/1.5.12:
-    resolution: {integrity: sha512-re7UdjE5UnwdrovyhNzZ6gathI4Rs3KGCBSc8HCIjUo5hO42CtzyblmWLj6QWVw7huHyDMfpKxhiO2II77nhDw==}
-    dev: false
 
   /cross-spawn/7.0.3:
     resolution: {integrity: sha512-iRDPJKUPVEND7dHPO8rkbOnPpyDygcDFtWjpeWNCgy8WP2rXcxXL8TskReQl6OrB2G7+UJrags1q15Fudc7G6w==, registry: https://registry.yarnpkg.com/, tarball: https://registry.yarnpkg.com/cross-spawn/-/cross-spawn-7.0.3.tgz}
@@ -1773,15 +1767,6 @@ packages:
   /quick-lru/5.1.1:
     resolution: {integrity: sha512-WuyALRjWPDGtt/wzJiadO5AXY+8hZ80hVpe6MyivgraREW751X3SbhRvG3eLKOYN+8VEvqLcf3wdnt44Z4S4SA==}
     engines: {node: '>=10'}
-
-  /react-cropper/2.1.8_react@18.2.0:
-    resolution: {integrity: sha512-QEj6CE9et/gMRqpaKMgZQdBgtzLjjq+zj1pmHwtoWG6GqscDl4QpTwoEElWN2pieYxkwFaZa0lPiD2b9nwqLKQ==}
-    peerDependencies:
-      react: '>=16.0.0'
-    dependencies:
-      cropperjs: 1.5.12
-      react: 18.2.0
-    dev: false
 
   /react-dom/18.2.0_react@18.2.0:
     resolution: {integrity: sha512-6IMTriUmvsjHUjNtEDudZfuDQUoWXVxKHhlEGSk81n4YFS+r/Kl99wXiwlVXtPBtJenozv2P+hxDsw9eA7Xo6g==, registry: https://registry.yarnpkg.com/, tarball: https://registry.yarnpkg.com/react-dom/-/react-dom-18.2.0.tgz}
