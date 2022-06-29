@@ -12,6 +12,7 @@ export default function Home() {
     const [fg, setFg] = useState("8A84F2");
     const [bg, setBg] = useState("FCEFE0");
     const [extraFilter, setExtraFilter] = useState("");
+    const [pattern, setPattern] = useState(null);
     const setColor = (f, b) => {
         setFg(f);
         setBg(b);
@@ -32,7 +33,11 @@ export default function Home() {
 
                 <div className="grid grid-cols-3">
                     <ImagePicker setUuid={setUuid} />
-                    <ArgumentPicker setColor={setColor} setSoftness={setSoftness} setExtraFilter={setExtraFilter} />
+                    <ArgumentPicker
+                        setColor={setColor}
+                        setSoftness={setSoftness}
+                        setExtraFilter={setExtraFilter}
+                        setPattern={setPattern} />
                 </div>
 
                 <ImageContext.Provider value={{
@@ -40,7 +45,8 @@ export default function Home() {
                     softness: softness,
                     fg: fg,
                     bg: bg,
-                    extraFilter: extraFilter
+                    extraFilter: extraFilter,
+                    pattern: pattern,
                 }}>
                     <PreviewSection name="facebook" description="Because the size of this social network, Facebook images are mostly utilitarian. Don't expect people to passionately explore them and pin them to their moodboards. However, Facebook supports a wide variety of sizes, so you can utilize them to build a solid brand image.">
                         <Preview title="facebook image post" w={1200} h={630} tip="Pro Tip: Because posts with singular images take full width, you may use text as well as highly-detailed images. They will be easily recognizable and noticeable." />

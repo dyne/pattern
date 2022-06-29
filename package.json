@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@uploadcare/react-widget": "^2.1.1",
+    "css-doodle": "^0.28.1",
     "daisyui": "^2.15.4",
     "next": "12.1.6",
     "react": "18.2.0",

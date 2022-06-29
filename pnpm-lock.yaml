@@ -3,6 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@uploadcare/react-widget': ^2.1.1
   autoprefixer: ^10.4.7
+  css-doodle: ^0.28.1
   daisyui: ^2.15.4
   eslint: 8.17.0
   eslint-config-next: 12.1.6
@@ -16,6 +17,7 @@ specifiers:
 
 dependencies:
   '@uploadcare/react-widget': 2.1.1_biqbaboplfbrettd7655fr4n2y
+  css-doodle: 0.28.1
   daisyui: 2.15.4_ugi4xkrfysqkt4c4y6hkyfj344
   next: 12.1.6_biqbaboplfbrettd7655fr4n2y
   react: 18.2.0
@@ -560,6 +562,10 @@ packages:
       shebang-command: 2.0.0
       which: 2.0.2
     dev: true
+
+  /css-doodle/0.28.1:
+    resolution: {integrity: sha512-FP+UTq97U9/hp/yseGFdc3RimD5ZKjdiunqL2p+0dzsbcp1vjh6vkwNOwZkJSGJ5aTxcIjNqo/xmn55fOb76LQ==}
+    dev: false
 
   /css-selector-tokenizer/0.8.0:
     resolution: {integrity: sha512-Jd6Ig3/pe62/qe5SBPTN8h8LeUg/pT4lLgtavPf7updwwHpvFzxvOQBHYj2LZDMjUnBzgvIUSjRcf6oT5HzHFg==}

@@ -15,9 +15,9 @@ const Preview = ({ title = "", tip, w, h }) => {
                         <div className="pl-3 text-2xs">{tip}</div>
                     </div>
 
-                    <div className="card card-compact">
+                    <div className="rounded-none card card-compact">
                         <figure>
-                            <svg viewBox={`0 0 ${w} ${h}`} id={title}>
+                            <svg viewBox={`0 0 ${w} ${h}`} id={title} className="rounded-lg">
                                 <defs>
                                     <Filter softness={image.softness} bg={image.bg} fg={image.fg} />
                                 </defs>
@@ -30,6 +30,7 @@ const Preview = ({ title = "", tip, w, h }) => {
                                         preserveAspectRatio="xMidYMid meet"
                                         xlinkHref={`https://ucarecdn.com/${image.uuid}/-/scale_crop/${w + 1}x${h + 1}/smart/center`}
                                         filter={`url(#filter)${image.extraFilter}`} />
+                                    {image.pattern && <rect x="0" y="0" width="100%" height="100%" fill={`${image.pattern}`} /> }
                                 </g>
                             </svg>
                         </figure>

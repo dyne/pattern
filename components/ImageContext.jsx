@@ -5,7 +5,8 @@ const ImageContext = createContext({
     softness: 2,
     fg: "8A84F2",
     bg: "FCEFE0",
-    extraFilter: ""
+    extraFilter: "",
+    pattern: null
 })
 
 export default ImageContext
