@@ -1,0 +1,11 @@
+name: 🚀 Pangloin deploy
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    uses: dyne/workflows/.github/workflows/node-staging-deploy@main
+    secrets: inherit
