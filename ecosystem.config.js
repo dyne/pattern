@@ -2,11 +2,15 @@ module.exports = {
   apps: [
     {
       name: 'pattern',
-      script: 'yarn start -p 3030',
       time: true,
-      instances: 1,
       autorestart: true,
       max_restarts: 50,
+      script: "node_modules/next/dist/bin/next",
+      args: "start",
+      exec_mode: "cluster",
+      instances: 0,
+      listen_timeout: 12000,
+      wait_ready: true
       watch: false,
       env: {
         PORT: 3030,
