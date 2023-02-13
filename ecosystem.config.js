@@ -7,8 +7,7 @@ module.exports = {
       max_restarts: 50,
       script: "node_modules/next/dist/bin/next",
       args: "start",
-      exec_mode: "cluster",
-      instances: 0,
+      instances: 1,
       listen_timeout: 12000,
       wait_ready: true,
       watch: false,
@@ -18,7 +17,7 @@ module.exports = {
     },
   ],
   deploy: {
-    pangolin: {
+    baloo: {
       host: 'deploy_staging',
       ref: 'origin/main',
       repo: 'https://github.com/dyne/pattern',
